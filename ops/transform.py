@@ -3,8 +3,7 @@ import random
 
 from PIL import Image, ImageOps
 from torchvision import transforms
-from torchvision.transforms import InterpolationMode, AutoAugment, AutoAugmentPolicy
-
+from torchvision.transforms import InterpolationMode
 class GroupRandomCrop:
     def __init__(self, size):
         self.size = (int(size), int(size)) if isinstance(size, int) else size
@@ -68,20 +67,12 @@ class GroupNormalize:
         rep_mean = self.mean.repeat(c // 3, 1, 1)
         rep_std = self.std.repeat(c // 3, 1, 1)
         return (tensor - rep_mean) / rep_std
-    
-class GroupApplyTransform:
-    def __init__(self, transform):
-        self.transform = transform
-
-    def __call__(self, img_group):
-        return [self.transform(img) for img in img_group]
 
 
 def train_transforms():
     return transforms.Compose([
         GroupScale((256, 256)),
         GroupRandomCrop(224),
-        GroupApplyTransform(AutoAugment(policy=AutoAugmentPolicy.IMAGENET)),
         GroupRandomHorizontalFlip(),
         Stack(),
         GroupNormalize(
