@@ -8,10 +8,10 @@ We further integrate the Temporal Shift Module (TSM) to enable efficient tempora
 
 ## Highlights
 
-- ✅ Based on [MobileNetV4](https://arxiv.org/abs/2404.10518): a channel-efficient, multi-stage design derived from MobileNetV3.
-- ✅ Integrated [TSM (Temporal Shift Module)](https://arxiv.org/abs/1811.08383) for lightweight temporal modeling.
-- ✅ Designed for frame-efficient segment-based video classification.
-- ✅ Works well on edge devices and low-resource environments.
+-  Based on [MobileNetV4](https://arxiv.org/abs/2404.10518): a channel-efficient, multi-stage design derived from MobileNetV3.
+-  Integrated [TSM (Temporal Shift Module)](https://arxiv.org/abs/1811.08383) for lightweight temporal modeling.
+-  Designed for frame-efficient segment-based video classification.
+-  Works well on edge devices and low-resource environments.
 
 
 ---
