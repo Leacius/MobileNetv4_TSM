@@ -16,6 +16,7 @@ We recommend using `conda` to manage dependencies:
 conda create -n MobileNetv4_TSM python=3.11
 conda activate MobileNetv4_TSM
 pip install -r requirements.txt
+```
 
 ### Acknowledgements
 
