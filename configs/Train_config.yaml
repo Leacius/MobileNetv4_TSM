@@ -1,0 +1,37 @@
+root: ./mlb-youtube/clips/
+label: ./mlb-youtube/label_frames.txt
+
+num_classes: 2
+
+
+# 參數
+epochs: 100
+new_length: 3
+num_segments: 8
+frame_interval: 2
+batch_size: 32
+num_workers: 6
+num_classes: 2
+
+# Model Configs
+weights: ./ops/pre_trained/25_epoch_ckpt.pth.tar
+
+warmup_epoch: 0
+
+# Learning Configs
+epochs: 60
+batch_size: 8
+lr_scheduler: step
+lr_decay_rate: 0.1
+lr_steps: [10, 20]
+lr: 0.002
+momentum: 0.9
+weight_decay: 0.0001
+no_partialbn: True
+clip_gradient: 20
+
+# Monitor Configs
+print_freq: 20
+eval_freq: 1
+
+# Runtime Configs
