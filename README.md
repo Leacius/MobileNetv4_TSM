@@ -16,3 +16,13 @@ We recommend using `conda` to manage dependencies:
 conda create -n MobileNetv4_TSM python=3.11
 conda activate MobileNetv4_TSM
 pip install -r requirements.txt
+
+### Acknowledgements
+
+This project is a side project that builds on the work of two research contributions:
+
+- **Temporal Shift Module (TSM)**:  
+  [GitHub](https://github.com/mit-han-lab/temporal-shift-module) | [Paper](https://arxiv.org/abs/1811.08383)
+
+- **MobileNetV4**:  
+  [Paper: "MobileNetV4: Universal CNNs for Mobile Vision"](https://arxiv.org/abs/2404.10518)
