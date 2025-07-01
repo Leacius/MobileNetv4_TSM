@@ -6,7 +6,7 @@ label: ./mlb-youtube/label_frames.txt
 num_classes: 2
 
 # Model Configs
-weights: ./ops/pre_trained/25_epoch_ckpt.pth.tar
+weights: 
 new_length: 3
 num_segments: 8
 frame_interval: 2
