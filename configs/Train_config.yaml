@@ -6,7 +6,7 @@ label: ./mlb-youtube/label_frames.txt
 num_classes: 2
 
 # Model Configs
-weights: 
+weights: ""
 new_length: 3
 num_segments: 8
 frame_interval: 2
