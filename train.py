@@ -45,6 +45,8 @@ class Trainer:
         return cf_matrix
     
     def load_model(self, weight):
+        if len(weight) == 0:
+            return
         self.logger.info("=> fine-tuning from '{}'".format(weight))
         ckpt = torch.load(weight, weights_only=True)
         sd = ckpt['state_dict'] if 'state_dict' in ckpt else ckpt
