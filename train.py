@@ -190,6 +190,7 @@ class Trainer:
         # 訓練
         for epoch in range(self.args.epochs):
             train_loss, train_top1, train_top5 = self.train(epoch)
+            self.scheduler.step()
             if (epoch + 1) % 1 == 0 or epoch == self.args.epochs - 1:
                 prec1, prec5, val_loss = self.validate()
                 if prec1 > self.best_prec1:
@@ -208,6 +209,7 @@ class Trainer:
                         'epoch': epoch + 1,
                         'state_dict': self.model.state_dict(),
                         'optimizer': self.optimizer.state_dict(),
+                        "scheduler": self.scheduler.state_dict(),
                         'prec1': prec1,
                         'best_prec1': self.best_prec1,
                     }, save_epoch)
