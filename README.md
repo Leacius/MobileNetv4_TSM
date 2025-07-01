@@ -19,26 +19,23 @@ pip install -r requirements.txt
 ```
 
 ## Data Format
-This section describes how to train the MobileNetv4_TSM model on a custom video classification dataset.
+To train the `MobileNetv4_TSM` model, your dataset should follow this structure:
 
-📁 Dataset Format
-Your dataset should follow this structure:
-
+```
 dataset_root/
 ├── video1.mp4
 ├── video2.mp4
 └── ...
-
+```
 And a label file in the format:
 
+```
 video1 123 0
 video2 146 1
 ...
-
+```
 Each line contains:
-video_name (without .mp4)
-total_frame_count
-class_label
+video_name (without .mp4) total_frame_count class_label
 
 ### Acknowledgements
 
